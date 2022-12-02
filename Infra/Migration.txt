@@ -1,0 +1,5 @@
+﻿1) Criar banco inicial
+Add-Migration Inicial -Context ContextBase
+
+2) Atualiza banco
+Update-Database -Context ContextBase
