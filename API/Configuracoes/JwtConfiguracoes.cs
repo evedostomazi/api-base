@@ -11,10 +11,13 @@ namespace API.Configuracoes
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
       .AddJwtBearer(option =>
       {
+          option.RequireHttpsMetadata = true;
+          option.SaveToken = true;
+
           option.TokenValidationParameters = new TokenValidationParameters
           {
-              ValidateIssuer = false,
-              ValidateAudience = false,
+              ValidateIssuer = true,
+              ValidateAudience = true,
               ValidateLifetime = true,
               ValidateIssuerSigningKey = true,
 

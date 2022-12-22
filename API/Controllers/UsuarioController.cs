@@ -37,7 +37,7 @@ namespace API.Controllers
                     return Unauthorized("Usuário não localizado.");
             }
             else
-                return Unauthorized("Usuário e/ou senha inálido.");
+                return Unauthorized("Usuário e/ou senha inválido.");
         }
 
         [AllowAnonymous]

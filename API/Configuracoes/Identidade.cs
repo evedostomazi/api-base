@@ -15,7 +15,8 @@ namespace API.Configuracoes
                 x.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
                 x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultProvider;
             })
-            .AddEntityFrameworkStores<ContextBase>();
+            .AddEntityFrameworkStores<ContextBase>()
+            .AddDefaultTokenProviders();
         }
 
     }
